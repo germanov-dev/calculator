@@ -2,6 +2,6 @@
 
 # Calculator
 
-Simple Weather App using Vanilla JS and Dark Sky API.
+Simple Calculator using Vanilla JS.
 
 [Calculate now!](https://germanov.js.org/calculator)
