@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *,
 *:before,
 *:after {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -26,24 +34,157 @@ body:after {
 
 .calculator {
 	min-height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
 .calculator .calculator__inner {
 	position: relative;
 	z-index: 10;
+	display: -ms-grid;
 	display: grid;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-ms-flex-line-pack: center;
 	align-content: center;
+	-ms-grid-columns: (100px) [4];
 	grid-template-columns: repeat(4, 100px);
+	-ms-grid-rows: minmax(120px, auto) (100px) [5];
 	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 	background: #000000;
 	margin: 0 auto;
 	padding: 10px;
 	border-radius: 25px;
+	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.calculator .calculator__inner > *:nth-child(1) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+}
+
+.calculator .calculator__inner > *:nth-child(2) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 2;
+}
+
+.calculator .calculator__inner > *:nth-child(3) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
+}
+
+.calculator .calculator__inner > *:nth-child(4) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 4;
+}
+
+.calculator .calculator__inner > *:nth-child(5) {
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
+}
+
+.calculator .calculator__inner > *:nth-child(6) {
+	-ms-grid-row: 2;
+	-ms-grid-column: 2;
+}
+
+.calculator .calculator__inner > *:nth-child(7) {
+	-ms-grid-row: 2;
+	-ms-grid-column: 3;
+}
+
+.calculator .calculator__inner > *:nth-child(8) {
+	-ms-grid-row: 2;
+	-ms-grid-column: 4;
+}
+
+.calculator .calculator__inner > *:nth-child(9) {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+}
+
+.calculator .calculator__inner > *:nth-child(10) {
+	-ms-grid-row: 3;
+	-ms-grid-column: 2;
+}
+
+.calculator .calculator__inner > *:nth-child(11) {
+	-ms-grid-row: 3;
+	-ms-grid-column: 3;
+}
+
+.calculator .calculator__inner > *:nth-child(12) {
+	-ms-grid-row: 3;
+	-ms-grid-column: 4;
+}
+
+.calculator .calculator__inner > *:nth-child(13) {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1;
+}
+
+.calculator .calculator__inner > *:nth-child(14) {
+	-ms-grid-row: 4;
+	-ms-grid-column: 2;
+}
+
+.calculator .calculator__inner > *:nth-child(15) {
+	-ms-grid-row: 4;
+	-ms-grid-column: 3;
+}
+
+.calculator .calculator__inner > *:nth-child(16) {
+	-ms-grid-row: 4;
+	-ms-grid-column: 4;
+}
+
+.calculator .calculator__inner > *:nth-child(17) {
+	-ms-grid-row: 5;
+	-ms-grid-column: 1;
+}
+
+.calculator .calculator__inner > *:nth-child(18) {
+	-ms-grid-row: 5;
+	-ms-grid-column: 2;
+}
+
+.calculator .calculator__inner > *:nth-child(19) {
+	-ms-grid-row: 5;
+	-ms-grid-column: 3;
+}
+
+.calculator .calculator__inner > *:nth-child(20) {
+	-ms-grid-row: 5;
+	-ms-grid-column: 4;
+}
+
+.calculator .calculator__inner > *:nth-child(21) {
+	-ms-grid-row: 6;
+	-ms-grid-column: 1;
+}
+
+.calculator .calculator__inner > *:nth-child(22) {
+	-ms-grid-row: 6;
+	-ms-grid-column: 2;
+}
+
+.calculator .calculator__inner > *:nth-child(23) {
+	-ms-grid-row: 6;
+	-ms-grid-column: 3;
+}
+
+.calculator .calculator__inner > *:nth-child(24) {
+	-ms-grid-row: 6;
+	-ms-grid-column: 4;
 }
 
 .calculator .btn {
@@ -54,6 +195,8 @@ body:after {
 	margin: 8px;
 	background: #505050;
 	color: #fff;
+	-webkit-transition: background 0.4s, color 0.4s;
+	-o-transition: background 0.4s, color 0.4s;
 	transition: background 0.4s, color 0.4s;
 	outline: 0;
 }
@@ -86,6 +229,7 @@ body:after {
 }
 
 .calculator .btn--large {
+	-ms-grid-column-span: 2;
 	grid-column: span 2;
 	border-radius: 50px;
 }
@@ -93,9 +237,18 @@ body:after {
 .calculator .calculator__output {
 	grid-column: 1 / -1;
 	color: #ffffff;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
 	align-items: flex-end;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	padding: 20px;
 	height: 136px;
