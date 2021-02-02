@@ -135,7 +135,3 @@ deleteButton.addEventListener('click', (button) => {
 	calculator.delete();
 	calculator.updateDisplay();
 });
-
-allButtons.addEventListener('touchstart', (event) => {
-	event.preventDefault;
-});
