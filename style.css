@@ -257,8 +257,14 @@ body:after {
 .calculator .calculator__prev-operand {
 	font-size: 2rem;
 	color: rgba(255, 255, 255, 0.7);
+	display: block;
+	width: 100%;
+	overflow: hidden;
 }
 
 .calculator .calculator__current-operand {
 	font-size: 3rem;
+	display: block;
+	width: 100%;
+	overflow: hidden;
 }
