@@ -89,6 +89,7 @@ class Calculator {
 	}
 }
 
+const allButtons = document.querySelectorAll('.btn');
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
@@ -133,4 +134,8 @@ allClearButton.addEventListener('click', (button) => {
 deleteButton.addEventListener('click', (button) => {
 	calculator.delete();
 	calculator.updateDisplay();
+});
+
+allButtons.addEventListener('touchstart', (event) => {
+	event.preventDefault;
 });
