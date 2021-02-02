@@ -260,6 +260,7 @@ body:after {
 	display: block;
 	width: 100%;
 	overflow: hidden;
+	text-align: left;
 }
 
 .calculator .calculator__current-operand {
@@ -267,4 +268,5 @@ body:after {
 	display: block;
 	width: 100%;
 	overflow: hidden;
+	text-align: left;
 }
